@@ -3,17 +3,17 @@ var SelectDishView = function (container, model) {
 	
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction)
-	this.firstDishName = container.find("#firstDishName");
+	this.allDishes = container.find("#allDishes");
 	var allDishes = model.getAllDishes("starter");
-
-	this.firstDishName.html(firstDishName);
 
 	var allDishesHtml = "";
 
 	for (i = 0; i < allDishes.length; i++) { 
        allDishesHtml += allDishes[i].name + "<br>";
+       allDishesHtml += "<img src='images/"+allDishes[i].image + "'><br>";
+       allDishesHtml += allDishes[i].description + "<br><br/>";
     }
 	
-	this.firstDishName.html(allDishesHtml);
+	this.allDishes.html(allDishesHtml);
 }
  
