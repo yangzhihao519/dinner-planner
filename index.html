@@ -6,11 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dinner planner</title>
 
-    <!-- Bootstrap CSS -->
+    <script src="../js/jquery.1.12.0.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	
+	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
   </head>
   <body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3" style="border-right: 2px solid #bfbfbf" id="view2">
+				<p class="lead">My Dinner</p>    
+				<div class="col-md-12" id="guestNumberView">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<span class="col-md-6">Number of People:</span>
+							<span class="col-md-6">
+								<span class="col-md-8">
+									<input type="number" style="width:50px" id="numberOfGuests" min="0" max="100"></input>
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<table class="table">
+							<thead>
+								<tr>
+								  <th>Dish Name</th>
+								  <th>Cost</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								  <td>Pending</td>
+								  <td>0.00</td>
+								</tr>
+								<tr>
+								  <td>Total</td>
+								  <td></td>
+								</tr>
+							</tbody>
+							</table>		  
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="btn-group">
+						<button class="btn btn-default" type="button">
+							Confirm Dinner
+						</button>
+					</div>
+				</div>
+			</div>
+		<!-- <h1>Dinner planner</h1>
+		<div id="guestNumberView">
+			<div>
+			<input type="number" style="width:50px" id="numberOfGuests" min="0" max="100" onchange="changeGuests()"></input>
+				 Number of guests: <span id="numberOfGuests"></span> 
+			</div>
+			<div>
+          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+			</div> 
+		</div> -->
+	
+		
+		<div class="col-md-9">
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		    <div class="col-md-12">
+			<p>Select Dish</p>
+			<div class="col-md-12">
+				<div class="col-md-3">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search for...">
+					<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Search</button>
+					</span>
+				</div>
+				</div>
+				<div class="col-md-3">
+				<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Select
+					<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<li><a href="#">All Dish</a></li>
+					<li><a href="#">Starter</a></li>
+					<li><a href="#">Main Course</a></li>
+					<li><a href="#">Dessert</a></li>
+					</ul>
+				</div>
+				</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-12">
+			  <div class="panel panel-default">
+			  <div class="panel-body">
+				<h1> The dishes to be selected</h1>
+				<div id="selectDishView">
+					All Dishes: <br/>
+				<span id="allDishes"></span>
+				</div>
+			  </div>
+			  </div>
+		  </div>
+		</div>  
+	</div>
 	<div class="container">
 		<div class="row">
             <!--The Left View 2: guest number and order-->
