@@ -9,9 +9,19 @@ var SelectDishView = function (container, model) {
 	var allDishesHtml = "";
 
 	for (i = 0; i < allDishes.length; i++) { 
-       allDishesHtml += allDishes[i].name + "<br>";
-       allDishesHtml += "<img src='images/"+allDishes[i].image + "'><br>";
-       allDishesHtml += allDishes[i].description + "<br><br/>";
+		allDishesHtml += "<div class=\"col-md-4\">"+
+				            "<div class=\"col-md-12 col-xs-8 thumb\">"+
+					            "<a class=\"thumbnail\">"+
+						        	"<img src='images/"+ allDishes[i].image + "'>"+
+					            "</a>"+
+				            "</div>"+
+					        "<div class=\"col-md-12 col-xs-8 thumb\">"+
+					        	"<span class=\"input-group-addon\">" + allDishes[i].name + "</span>"+
+					        "</div>"+
+					        "<div class=\"col-md-12 col-xs-8 thumb\">"+
+								        "<p class=\"parapadding\">"+allDishes[i].description+"</p>"+
+							"</div>"+
+						"</div>";
     }
 	
 	this.allDishes.html(allDishesHtml);

@@ -120,6 +120,57 @@
 		  </div>
 		</div>  
 	</div>
+	<div class="container">
+		<div class="row">
+            <!--The Left View 2: guest number and order-->
+			<div class="col-md-4">
+				<h1>Dinner planner</h1>
+				<div id="guestNumberView">
+					<div>
+						Number of guests: <span id="numberOfGuests"></span>
+					</div>
+					<div>
+			            <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+						<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
+				</div>
+			</div>
+
+			<!--The Right View 3: select dish-->
+			<div class="col-md-8">
+				<!--At the Top: filter & type-->
+				<div class="col-md-3">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Search</button>
+						</span>
+					</div><!-- /input-group -->
+				</div>
+				<div class="col-md-3">
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Select
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">x1</a></li>
+							<li><a href="#">x2</a></li>
+							<li><a href="#">x3</a></li>
+						</ul>
+					</div>
+				</div>
+				<br/>
+
+				<!--At the Bottom: Display dishes-->
+				<h1> The dishes to be selected</h1>
+				<div id="selectDishView">
+					 All Dishes: <br/>
+					 <div id="allDishes"></div>
+				</div>
+			</div>
+
+		</div>
 	</div>
 
     <!-- jQuery -->
