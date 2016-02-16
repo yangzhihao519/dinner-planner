@@ -149,6 +149,18 @@ var DinnerModel = function() {
 		}
 	}
 
+	//function that returns total price of one dish of specific ID
+	this.getDishTotalPrice = function (id) {
+		var dish = this.getDish(id);
+		var allIngredients = dish.ingredients;
+		var dishTotalPrice = 0;
+
+		for(key in allIngredients){
+			dishTotalPrice = dishTotalPrice + allIngredients[key].price;
+		}
+
+		return dishTotalPrice;
+	}
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
