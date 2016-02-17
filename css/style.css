@@ -1,4 +1,4 @@
- .landingimage{ 
+.landingimage{ 
   background: url(../images/family_dinner.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -16,7 +16,11 @@
 	padding-bottom: 20px;
 	color: black;
 }
-
+.headersection{
+	width:100%;
+	background-color: rgb(255,235,182);
+	border-bottom: 3px solid #999;
+}
 .textBox{
 	position: absolute;
 	top: 200px;
