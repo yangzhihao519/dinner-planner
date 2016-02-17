@@ -13,8 +13,7 @@ var PrepareDishView = function (container, model) {
 	for(i=0; i< dishId.length; i++)
 	{
 		var dish = model.getDish(dishId[i]);
-		console.log(dish);
-		
+				
 		prepareDishHtml += "<div class=\"panel panel-default\">"+
 								"<div class=\"panel-body\">"+
 									"<div class=\"col-md-12\">"+
