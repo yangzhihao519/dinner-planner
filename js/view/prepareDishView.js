@@ -35,7 +35,7 @@ var PrepareDishView = function (container, model) {
 										"</div>"+
 									"</div>"+
 								"</div>"+
-								"</div>";
+							"</div>";
 		
 	}
 	this.prepareDishes.html(prepareDishHtml);
