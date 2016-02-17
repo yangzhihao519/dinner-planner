@@ -8,13 +8,16 @@ var PrepareDishView = function (container, model) {
 	
 	this.numberOfPeople.html(model.getNumberOfGuests);
 
-	var dishId = ["1", "101"];
+	// var dishId = ["1", "101"];
+	var dishes = model.getFullMenu();
+	console.log(dishes);
+
 	var prepareDishHtml = "",
 		desp = "Description:"
 	
-	for(i=0; i< dishId.length; i++)
+	for(i=0; i< dishes.length; i++)
 	{
-		var dish = model.getDish(dishId[i]);
+		var dish = dishes[i];
 				
 		prepareDishHtml += "<div class=\"panel panel-default\">"+
 								"<div class=\"panel-body\">"+
