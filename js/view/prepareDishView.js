@@ -4,7 +4,9 @@ var PrepareDishView = function (container, model) {
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction)
 	this.prepareDishes = container.find("#prepareDish");
-			
+	this.numberOfPeople = container.find("#numberOfPeople");
+	
+	this.numberOfPeople.html(model.getNumberOfGuests);
 
 	var dishId = ["1", "101"];
 	var prepareDishHtml = "",
